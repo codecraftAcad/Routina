@@ -55,6 +55,10 @@ jobs:
           echo "KEY_ALIAS=${{ secrets.KEY_ALIAS }}" >> android/gradle.properties
           echo "KEY_PASSWORD=${{ secrets.KEY_PASSWORD }}" >> android/gradle.properties
 
+      - name: Make Gradle wrapper executable
+        run: chmod +x android/gradlew
+
+
       - name: Build AAB
         working-directory: android
         run: ./gradlew bundleRelease --no-daemon -Porg.gradle.jvmargs=-Xmx2048m
