@@ -37,6 +37,7 @@ dependencies {
     }
 }
 
+apply plugin: 'com.github.triplet.play'
 // Play Publisher config
 play {
     serviceAccountCredentials = file("play-service-account.json")
