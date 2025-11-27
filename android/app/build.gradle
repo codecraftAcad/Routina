@@ -217,3 +217,13 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
+apply plugin: 'com.github.triplet.play'
+
+play {
+    serviceAccountCredentials = file("play-service-account.json")
+    track = "internal"   // this publishes to internal testing track
+}
+plugins {
+    id 'com.github.triplet.play' version '3.8.4' apply false
+}
