@@ -2,6 +2,11 @@ plugins {
     id 'com.android.application'
 }
 
+project.ext.react = [
+    enableHermes: true  // set Hermes as needed
+]
+
+
 android {
     compileSdkVersion 33
     buildToolsVersion "33.0.2"
