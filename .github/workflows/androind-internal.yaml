@@ -36,7 +36,7 @@ jobs:
           node-version: 18
 
       - name: Install JS dependencies
-        run: npm ci
+        run: npm ci && cd android && ./gradlew clean
 
       - name: Generate release keystore
         run: |
