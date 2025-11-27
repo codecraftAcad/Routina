@@ -8,6 +8,7 @@ project.ext.react = [
 
 
 android {
+    namespace = "com.aking"  
     compileSdkVersion 33
     buildToolsVersion "33.0.2"
 
